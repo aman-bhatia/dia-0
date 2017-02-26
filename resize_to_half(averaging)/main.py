@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img1024 = cv2.imread("1024.jpg")
+img = cv2.imread("../lena.jpg")
 
 def resize_average(x):
 	'''
@@ -16,13 +16,5 @@ def resize_average(x):
 	return result
 
 
-img512 = resize_average(img1024)
-cv2.imwrite("512.jpg",img512)
-
-
-img256 = resize_average(img512)
-cv2.imwrite("256.jpg",img256)
-
-
-img128 = resize_average(img256)
-cv2.imwrite("128.jpg",img128)
+img_half_average = resize_average(img)
+cv2.imwrite("img_half_average.jpg",img_half_average)

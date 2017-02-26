@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img128 = cv2.imread("128.jpg")
+img = cv2.imread("../lena.jpg")
 
 def resize_replicate(x):
 	'''
@@ -16,14 +16,5 @@ def resize_replicate(x):
 	return result
 
 
-
-img256 = resize_replicate(img128)
-cv2.imwrite("256.jpg",img256)
-
-
-img512 = resize_replicate(img256)
-cv2.imwrite("512.jpg",img512)
-
-
-img1024 = resize_replicate(img512)
-cv2.imwrite("1024.jpg",img1024)
+img_doubled_replicate = resize_replicate(img)
+cv2.imwrite("img_doubled_replicate.jpg",img_doubled_replicate)

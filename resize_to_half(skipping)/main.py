@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img1024 = cv2.imread("1024.jpg")
+img = cv2.imread("../lena.jpg")
 
 def resize_skip(x):
 	'''
@@ -17,13 +17,5 @@ def resize_skip(x):
 
 
 
-img512 = resize_skip(img1024)
-cv2.imwrite("512.jpg",img512)
-
-
-img256 = resize_skip(img512)
-cv2.imwrite("256.jpg",img256)
-
-
-img128 = resize_skip(img256)
-cv2.imwrite("128.jpg",img128)
+img_half_skip = resize_skip(img)
+cv2.imwrite("img_half_skip.jpg",img_half_skip)
